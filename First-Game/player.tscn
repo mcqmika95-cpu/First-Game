@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://dkcycvxtmrr0h"]
+
+[ext_resource type="Script" path="res://Movement.gd" id="1_x0dh2"]
+
+[sub_resource type="Gradient" id="Gradient_y6ci6"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_q5g4i"]
+gradient = SubResource("Gradient_y6ci6")
+width = 32
+height = 32
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_x4582"]
+diffuse_texture = SubResource("GradientTexture2D_q5g4i")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j4oga"]
+
+[node name="Player" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_x0dh2")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = SubResource("CanvasTexture_x4582")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_j4oga")

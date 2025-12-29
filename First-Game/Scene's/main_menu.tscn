@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2n8hnn08pycj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ayubl"]
+bg_color = Color(0.729412, 0.223529, 0.243137, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c85q2"]
+bg_color = Color(0.639216, 0.184314, 0.203922, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -238.5
+offset_top = -135.5
+offset_right = 238.5
+offset_bottom = 135.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ayubl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ayubl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_c85q2")
+text = "Start Gambling"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ayubl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ayubl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_c85q2")
+text = "Options"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_ayubl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ayubl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_c85q2")
+text = "Stop Winning Money"
